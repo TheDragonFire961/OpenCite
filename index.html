@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<!--
+    This file is the landing popup page for OpenCite.
+	
+	Copyright (C) 2018 Ethan Nguyen/TheDragonFire961.
+	This file is part of OpenCite.
+	EdgeCite is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EdgeCite is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with OpenCite.  If not, see <https://www.gnu.org/licenses/>.
+-->
+  <head>
+    <link rel="stylesheet" type="text/css" href="includes/styles.css" />
+	<title>Cite this page</title>
+  </head>
+  <body>
+    <div id="preferences-modal">
+	  
+	</div>
+    <h1>Cite this page</h1>
+	<div class="tab">
+      <button class="tabbutton selected force-font" id="tab-new-citation">Create new citation</button>
+	  <button class="tabbutton force-font" id="tab-previous-citation">Use previous citation</button>
+	  <button class="tabbutton force-font" id="tab-references" class="references" >References</button>
+	</div>
+	<noscript><b>This file requires JavaScript to work properly.</b></noscript>
+	<div id="newcitation">
+	  <div id="citationform-form">
+	    <div id="citationformat-description" class="input-descriptor">Citation format</div>
+	    <select id="citationformat-dropdown">
+	      <option value="apa">APA</option>
+	    </select>
+	    <div id="citationtype-description">Type of document</div>
+   	    <select id="citationtype-description">
+	      <option value="apa" onclick="getSourceForm('apawebpage');">Web page</option>
+	    </select>
+	  </div>
+	  <div id="citation-form"></div>
+      <div id="product-results">
+	    <div id="products-wrapper">Produce: In-text reference <input id="intextrefernce-input" type="checkbox" checked="checked">&nbsp;&nbsp;&nbsp;Full citation <input id="citation-input" type="checkbox" checked="checked">
+	  </div>
+	  <button class="button green" type="button" id="produce-citation-button" onclick="produceCitation();">Produce citation</button> 
+	  </div>
+	</div>
+	<div id="citationlist">
+	</div>
+	<div id="references"></div>
+	<div id="final-citation"></div>
+	<div id="navbar" class="center small">&copy; 2018 Ethan Nguyen/TheDragonFire961. Licenced under the GNU General Public Licence v3.0<br>OpenCite Edge v1.0.0&nbsp;&nbsp;&nbsp;<span id="about-link" class="underline">About</span>&nbsp;&nbsp;&nbsp;<span id="releasenotes-link" class="underline">Release notes</span>&nbsp;&nbsp;&nbsp;<span id="licence-link" class="underline">Licence</span></div>
+	<!-- JavaScript libaries begin here -->
+	<script src="includes/dynamicform.js"></script>
+	<script src="includes/switchtabs.js"></script>
+	<script src="includes/landingvariables.js"></script>
+	<!-- JavaScript libraries end here. -->
+  </body>
+</html>

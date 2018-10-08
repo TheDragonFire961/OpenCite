@@ -1,0 +1,14 @@
+{
+  "name": "OpenCite",
+  "author": "Ethan Nguyen/TheDragonFire961",
+  "version": "1.0.0",
+  "description": "A fast way to create citations directly from the browser.",
+  "permissions": [
+    "storageUnlimited",
+	"contextMenus"
+  ], 
+  "browser_action": {
+    "default_title": "OpenCite - Cite this page",
+    "default_popup": "index.html"
+  }
+}
